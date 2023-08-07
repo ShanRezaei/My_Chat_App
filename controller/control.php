@@ -1217,7 +1217,7 @@ switch ($action) {
                             move_uploaded_file($image_temp_name, "../" . $image_address3);
 
                             // write post inside db
-                            $mypost = new Post($id, $_SESSION['this_user_username_new'], trim($_POST["post_title"]), trim($_POST['description']), $image_address3, $date);
+                            $mypost = new Post($id, $_SESSION['this_user_username_new'], trim($_POST["post_title"]), trim($_POST['description']), $image_address3, $date,$_SESSION['this_user_avatar_new']);
 
                             $sendpost = $DbMgr->sendPost($mypost);
 

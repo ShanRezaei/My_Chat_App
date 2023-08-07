@@ -184,7 +184,7 @@ if (isset($_SESSION['msg']) &&  $_SESSION['msg'] == "disabled") {
                                                     <td>
                                                         <div class="container">
                                                             <div class="row head" >
-                                                                <div class="col-4"><?= $comments->getUsername() ?></div>
+                                                                <div class="col-4"><img src="<?= $comments->getUserimg() ?>" alt="my_img" width="40px" height="30px" style="border-radius: 50px;" >  <?= $comments->getUsername() ?></div>
                                                                 <div class="col-8"><?= $comments->getDate() ?></div>
                                                             </div>
                                                             <div class="row" style="font-weight: 600; color:chocolate">

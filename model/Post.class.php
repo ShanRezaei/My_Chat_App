@@ -12,10 +12,11 @@
         private $date;
         private $userName;
         private $image;
+        private $userimg;
 
         // constructor
         // here we will give attribute array to the constructor, for $_post is array and also whatever we will received during reading the table will be array.
-		public function __construct($id1,$userName,$title,$body,$image,$date) {
+		public function __construct($id1,$userName,$title,$body,$image,$date,$userimg) {
             //With doing this for id which is autoincrement , we wont give amount during insertion but can read it
 			$this->id1 = $id1 ?? null;
 			$this->body = $body;
@@ -23,6 +24,7 @@
             $this->userName=$userName;
             $this->title=$title;
             $this->date=$date;
+            $this->userimg=$userimg;
 
 
 		}
@@ -119,7 +121,19 @@ public function setImage($image) : void
 
 }
 
+public function getUserimg()
+    {
+        return $this->userimg;
+    }
 
+/**
+ * @param mixed $avatar
+ */
+public function setUserimg($userimg) : void
+{
+    $this->userimg = $userimg;
+
+}
 
 
 

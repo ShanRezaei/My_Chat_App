@@ -135,8 +135,8 @@ class DbManager extends DbConnector {
 
     //write post
     public function sendPost(Post $post){
-        $query=$this->db->prepare("INSERT INTO post (userName,title,body,image,date) VALUES (?,?,?,?,?)");
-        $query->execute([$post->getUserName(),$post->getTitle(), $post->getBody(),$post->getImage(),$post->getDate()]);
+        $query=$this->db->prepare("INSERT INTO post (userName,title,body,image,date,userimg) VALUES (?,?,?,?,?,?)");
+        $query->execute([$post->getUserName(),$post->getTitle(), $post->getBody(),$post->getImage(),$post->getDate(),$post->getUserimg()]);
         $result1 = $query->fetchAll();
         return $result1;
 
@@ -147,10 +147,10 @@ class DbManager extends DbConnector {
     public function getPost(){
         $comment_obj = array();
         // query to get all users comments from posts db
-        $query = $this->db->query("SELECT `id`,`userName`, `title`, `body`,`image`,`date` FROM `post` ORDER BY `id` DESC LIMIT 7;");
+        $query = $this->db->query("SELECT `id`,`userName`, `title`, `body`,`image`,`date`,`userimg` FROM `post` ORDER BY `id` DESC LIMIT 7;");
         $user_comment = $query->fetchAll(PDO::FETCH_ASSOC);
         foreach ( $user_comment as $comment ) {
-            $comment_obj[] = new Post( $comment["id"],$comment["userName"],$comment["title"],$comment["body"],$comment["image"],$comment["date"] );
+            $comment_obj[] = new Post( $comment["id"],$comment["userName"],$comment["title"],$comment["body"],$comment["image"],$comment["date"],$comment["userimg"] );
         }
 
         return $comment_obj;
