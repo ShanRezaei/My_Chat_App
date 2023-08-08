@@ -113,7 +113,7 @@ if (isset($_SESSION['this_user_write_post_new']) && $_SESSION['this_user_write_p
 
 
                 <!------ sidebar to register or login------- -->
-                <div class="col-4">
+                <div class="col-12  col-lg-4 ">
 
                     <div class="card cards card-2 text-center" id="card2">
                         <!-- show there is error -->
@@ -162,7 +162,7 @@ if (isset($_SESSION['this_user_write_post_new']) && $_SESSION['this_user_write_p
                 </div>
 
                 <!-------- posts------- -->
-                <div class="col-8">
+                <div class="col-12  col-lg-8 ">
                     <div class="card cards card-2 text-center" id="card2">
                         <div class="card-body">
 

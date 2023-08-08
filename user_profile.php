@@ -120,7 +120,7 @@ if (isset($_SESSION['error_statup']) && $_SESSION['error_statup'] == "1") {
 
 
                 <!------ sidebar to register or login------- -->
-                <div class="col-4">
+                <div class="col-lg-4  col-12">
 
                     <div class="card cards card-2 text-center" id="card2">
                         <!-- show there is error -->
@@ -170,7 +170,7 @@ if (isset($_SESSION['error_statup']) && $_SESSION['error_statup'] == "1") {
                 </div>
 
                 <!-------- show users info------- -->
-                <div class="col-8">
+                <div class="col-12  col-lg-8 ">
                     <div class="card cards card-2 text-center" id="card2">
                         <div class="card-body">
 

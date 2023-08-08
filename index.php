@@ -103,11 +103,11 @@ if (isset($_SESSION['msg']) &&  $_SESSION['msg'] == "disabled") {
         </div>
         <!-- ------------------------sidebar  card and show post card------------------- -->
         <div class="container">
-            <div class="row" class="main">
+            <div class="row " class="main">
 
 
                 <!------ sidebar to register or login------- -->
-                <div class="col-4">
+                <div class="col-lg-4  col-12">
 
                     <div class="card cards card-2 text-center" id="card2">
                         <!-- show there is error -->
@@ -157,7 +157,7 @@ if (isset($_SESSION['msg']) &&  $_SESSION['msg'] == "disabled") {
                 </div>
 
                 <!-------- posts------- -->
-                <div class="col-8">
+                <div class="col-12  col-lg-8 ">
                     <div class="card cards card-2 text-center" id="card2">
                         <div class="card-body">
 
@@ -165,13 +165,13 @@ if (isset($_SESSION['msg']) &&  $_SESSION['msg'] == "disabled") {
                             <!------------------------------------ writing post part------------------------------- -->
 
                             <div class="container">
-                                <h5 class="card-title">Newest Posts</h5>
-                                <p class="card-text">With your Post, your friends will know new things.</p>
+                                <h5 >Newest Posts</h5>
+                                <p >With your Post, your friends will know new things.</p>
                                 <!-- see post part -->
 
                                 <!-- here see the posts -->
                                 <!-- to add scrolbar to the table add the following style "style="overflow-y:scroll;height:300px;width:450px;"" -->
-                                <div class="container" class="divScroll" style="overflow-y:scroll;height:360px;width:600px;">
+                                <div class="container"  style="overflow-y:scroll;height:350px;max-width:600px;">
 
                                     <!-- table -->
                                     <table class="table table-hover" style="border: 1px solid black;">
@@ -183,7 +183,7 @@ if (isset($_SESSION['msg']) &&  $_SESSION['msg'] == "disabled") {
                                                 <tr>
                                                     <td>
                                                         <div class="container">
-                                                            <div class="row head" >
+                                                            <div class="row head" style="font-weight: 600; ">
                                                                 <div class="col-4"><img src="<?= $comments->getUserimg() ?>" alt="my_img" width="40px" height="30px" style="border-radius: 50px;" >  <?= $comments->getUsername() ?></div>
                                                                 <div class="col-8"><?= $comments->getDate() ?></div>
                                                             </div>

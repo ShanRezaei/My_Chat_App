@@ -108,7 +108,7 @@ if (isset($_SESSION['msg']) &&  $_SESSION['msg'] == "disabled") {
 
 
                 <!------ sidebar to register or login------- -->
-                <div class="col-4">
+                <div class="col-lg-4  col-12">
 
                     <div class="card cards card-2 text-center" id="card2">
                         <!-- show there is error -->
@@ -158,7 +158,7 @@ if (isset($_SESSION['msg']) &&  $_SESSION['msg'] == "disabled") {
                 </div>
 
                 <!-------- users------- -->
-                <div class="col-8">
+                <div class="col-12  col-lg-8 ">
                     <div class="card cards card-2 text-center" id="card2">
                         <div class="card-body">
 
