@@ -374,11 +374,13 @@ switch ($action) {
 
                                     if (isset($adduser)) {
 
-                                        $actual_link = "https://nkhodapanah.herzingmontreal.ca/Shan_finalProjectB2M4/" . "activate.php?username=" . ($myusername) . "&email=" . ($myemail);
+                                        $actual_link = "https://nkhodapanah.herzingmontreal.ca/Shan_finalProjectB2M4/controller/activate.php?username=" . ($myusername) . "&email=" . ($myemail);
                                         $header = 'From:nkhodapanah@nkhodapanah.herzingmontreal.ca' . "\r\n";
                                         $email = $myemail;
                                         $subject = "User Registration Activation Email";
-                                        $content = "Click this link to activate your account. <a href='" . $actual_link . "'>" . $actual_link . "</a>";
+
+                                        $content = "<h4>Click link below to activate your account to log in.</h4>";
+                                        $content  .= " <p><a href='" . $actual_link . "'>" . $actual_link . "</a></p>";
 
                                         $sendemail = $DbMgr->sendEmail($email, $subject, $content, $header);
 
@@ -923,11 +925,12 @@ switch ($action) {
                         $_SESSION['random'] = $random_num;
 
 
-                        $actual_link = "https://nkhodapanah.herzingmontreal.ca/Shan_finalProjectB2M4/" . "active_user.php?activation_code=" . ($random_num) . "&email=" . $_SESSION['this_user_email_new'];
+                        $actual_link = "https://nkhodapanah.herzingmontreal.ca/Shan_finalProjectB2M4/controller/active_user.php?activation_code=" . ($random_num) . "&email=" . $_SESSION['this_user_email_new'];
                         $header = 'From:nkhodapanah@nkhodapanah.herzingmontreal.ca' . "\r\n";
                         $email = $_SESSION['this_user_email_new'];
                         $subject = " Activation Username and Password Email";
-                        $content = "Click this link to activate your username and password. <a href='" . $actual_link . "'>" . $actual_link . "</a>";
+                        $content  ="<h4>Click  link belowe to activate your username and password to log in back.</h4> ";
+                        $content .= "<p> <a href='" . $actual_link . "'>" . $actual_link . "</a></p>";
 
                         $sendemail = $DbMgr->sendEmail($email, $subject, $content, $header);
 
